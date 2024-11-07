@@ -3,15 +3,6 @@ import { LectobotAssistantService } from './lectobot-assistant.service';
 import { QuestionDto } from './dtos/question.dto';
 
 @Controller('lectobot-assistant')
-@UseCors({
-  origin: [
-    'https://main.d1p89hswv7ju6x.amplifyapp.com/',
-    'https://aimathmentor.com',
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-})
 export class LectobotAssistantController {
   constructor(
     private readonly lectobotAssistantService: LectobotAssistantService,
