@@ -5,7 +5,7 @@ import { QuestionDto } from './dtos/question.dto';
 @Controller('lectobot-assistant')
 @UseCors({
   origin: [
-    'https://main.d1p89hswv7ju6x.amplifyapp.com',
+    'https://main.d1p89hswv7ju6x.amplifyapp.com/',
     'https://aimathmentor.com',
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
