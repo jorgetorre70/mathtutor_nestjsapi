@@ -16,14 +16,14 @@ export class LectobotAssistantController {
     return await this.lectobotAssistantService.userQuestion(questionDto);
   }
 }
-function UseCors(arg0: {
-  // Añade esta línea
-  origin: string[];
-  methods: string[];
-  allowedHeaders: string[];
-  credentials: boolean;
-}): (
-  target: typeof LectobotAssistantController,
-) => void | typeof LectobotAssistantController {
-  throw new Error('Function not implemented.');
-}
+// function UseCors(arg0: {
+//   // Añade esta línea
+//   origin: string[];
+//   methods: string[];
+//   allowedHeaders: string[];
+//   credentials: boolean;
+// }): (
+//   target: typeof LectobotAssistantController,
+// ) => void | typeof LectobotAssistantController {
+//   throw new Error('Function not implemented.');
+// }
