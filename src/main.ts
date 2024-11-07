@@ -15,7 +15,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'https://aimathmentor.com',
-      'https://main.d1p89hswv7ju6x.amplifyapp.com/',
+      'https://main.d1p89hswv7ju6x.amplifyapp.com',
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
