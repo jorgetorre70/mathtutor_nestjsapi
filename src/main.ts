@@ -12,15 +12,25 @@ async function bootstrap() {
     }),
   );
 
+  // Configuración más detallada y permisiva
   app.enableCors({
-    origin: [
-      'https://aimathmentor.com',
-      'https://main.d1p89hswv7ju6x.amplifyapp.com',
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: true, // Permite todos los orígenes temporalmente
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+    exposedHeaders: ['Content-Range', 'X-Content-Range'],
     credentials: true,
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
   });
+  // app.enableCors({
+  //   origin: [
+  //     'https://aimathmentor.com',
+  //     'https://main.d1p89hswv7ju6x.amplifyapp.com',
+  //   ],
+  //   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  //   allowedHeaders: ['Content-Type', 'Authorization'],
+  //   credentials: true,
+  // });
 
   await app.listen(3000);
 }
